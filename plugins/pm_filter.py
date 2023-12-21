@@ -1515,6 +1515,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "reqinfo":
         await query.answer(text=script.REQINFO, show_alert=True)
 
+    elif query.data == "fixing":
+        await query.answer(text=script.FIXBRO, show_alert=True)
+
     elif query.data == "select":
         await query.answer(text=script.SELECT, show_alert=True)
 
@@ -1784,7 +1787,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', callback_data='source'),
+            InlineKeyboardButton('🔭 Rᴇɴᴅᴇʀɪɴɢ Sᴛᴀᴛᴜs ☁️', callback_data='fixing'),
+        ],[
+            InlineKeyboardButton('⚡️ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ⚡️', callback_data='source'),
         ],[
             InlineKeyboardButton('⇋ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ⇋', callback_data='start')
         ]]
