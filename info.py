@@ -17,6 +17,11 @@ API_ID = int(environ.get('API_ID', '21956488'))
 API_HASH = environ.get('API_HASH', '812529f879f06436925c7d62eb49f5d1')
 BOT_TOKEN = environ.get('BOT_TOKEN', "6858520223:AAHpU73aZFVmTVBmTLN3r5-GmpkE6CvqDSE")
 
+# Openai API
+OPENAI_API = environ.get('OPENAI_API', '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')
+if len(OPENAI_API) == 0:
+    print('Warning - OPENAI_API is empty')
+
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 99999))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
