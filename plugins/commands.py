@@ -161,15 +161,14 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-         #           reply_markup=InlineKeyboardMarkup(
-        #                [
-       #                  [
-      #                    InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-     #                     InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-    #                     ]
-   #                     ]
-  #                  )
- #               )
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('𝕄𝕠𝕧𝕚𝕖 𝔾𝕣𝕠𝕦𝕡', url=GRP_LNK)
+                         ]
+                        ]
+                    )
+                )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -178,15 +177,14 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
-        #            reply_markup=InlineKeyboardMarkup(
-       #                 [
-      #                   [
-     #                     InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-    #                      InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-   #                      ]
-  #                      ]
- #                   )
-#                )
+                    reply_markup=InlineKeyboardMarkup(
+                        [
+                         [
+                          InlineKeyboardButton('𝕄𝕠𝕧𝕚𝕖 𝔾𝕣𝕠𝕦𝕡', url=GRP_LNK)
+                         ]
+                        ]
+                    )
+                )
             except Exception as e:
                 logger.warning(e, exc_info=True)
                 continue
@@ -340,15 +338,14 @@ async def start(client, message):
                 file_id=file_id,
                 caption=f_caption,
                 protect_content=True if pre == 'filep' else False,
-               # reply_markup=InlineKeyboardMarkup(
-              #      [
-             #        [
-            #          InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-           #               InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-          #           ]
-         #           ]
-        #        )
-       #     )
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                     [
+                          InlineKeyboardButton('𝕄𝕠𝕧𝕚𝕖 𝔾𝕣𝕠𝕦𝕡', url=GRP_LNK)
+                     ]
+                    ]
+                )
+            )
             filesarr.append(msg)
         k = await client.send_message(chat_id = message.from_user.id, text=f"❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Fɪʟᴇ/Vɪᴅᴇᴏ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 𝟷𝟶 Mɪɴs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ/Vɪᴅᴇᴏ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>")
         await asyncio.sleep(600)
@@ -400,15 +397,14 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
-           #     reply_markup=InlineKeyboardMarkup(
-          #          [
-         #            [
-        #              InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-       #               InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-      #               ]
-     #               ]
-    #            )
-   #         )
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                     [
+                      InlineKeyboardButton('𝕄𝕠𝕧𝕚𝕖 𝔾𝕣𝕠𝕦𝕡', url=GRP_LNK)
+                     ]
+                    ]
+                )
+            )
             filetype = msg.media
             file = getattr(msg, filetype.value)
             title = '' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
@@ -458,18 +454,17 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
-#        reply_markup=InlineKeyboardMarkup(
-#            [
-#             [
-#              InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url=CHNL_LNK),
-#              InlineKeyboardButton('ɢʀᴏᴜᴘ', url=GRP_LNK)
-#             ]
-#            ]
-#        )
-#    )
-#    btn = [[
-#        InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
-#    ]]
+        reply_markup=InlineKeyboardMarkup(
+            [
+             [
+              InlineKeyboardButton('𝕄𝕠𝕧𝕚𝕖 𝔾𝕣𝕠𝕦𝕡', url=GRP_LNK)
+             ]
+            ]
+        )
+    )
+    btn = [[
+        InlineKeyboardButton("Get File Again", callback_data=f'delfile#{file_id}')
+    ]]
     k = await msg.reply("❗️❗️❗️𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧❗️️❗️❗️\n\n<b>Tʜɪs Mᴏᴠɪᴇ Fɪʟᴇ/Vɪᴅᴇᴏ Wɪʟʟ Bᴇ Dᴇʟᴇᴛᴇᴅ Iɴ 𝟷𝟶 Mɪɴs 🔰 Dᴜᴇ Tᴏ Cᴏᴘʏʀɪɢʜᴛ Issᴜᴇs.</b>\n\n<b>➸ Pʟᴇᴀsᴇ Fᴏʀᴡᴀʀᴅ Tʜɪs Fɪʟᴇ/Vɪᴅᴇᴏ Tᴏ Yᴏᴜʀ Sᴀᴠᴇᴅ Mᴇssᴀɢᴇs Aɴᴅ Sᴛᴀʀᴛ Dᴏᴡɴʟᴏᴀᴅ Tʜᴇʀᴇ.</b>",quote=True)
     await asyncio.sleep(600)
     await msg.delete()
