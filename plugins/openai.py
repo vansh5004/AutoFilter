@@ -1,7 +1,7 @@
 from info import OPENAI_API
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from openai import OpenAI
+import OpenAI
 
 ai_client = OpenAI(api_key=OPENAI_API)
 
