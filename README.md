@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://graph.org/file/8e0fca27184354f479593.jpg" alt="TG_BOTZ Logo">
+  <img src="https://graph.org/file/66e0fc2970bda9316dd95.jpg" alt="Vansh-Yadav">
 </p>
 <h1 align="center">
   TG_UPDATES1
@@ -9,19 +9,7 @@
 </p>
 <b>All this codes are created by our developers 
 
-<a href='https://t.me/SHD_KHAN'>SHAHID KHAN 👨‍💻</a>.</b>
-
-<b><a href='https://t.me/TG_Bots_Supporter'>KISHORE 👨‍💻</a>.</b>
-
-<b><a href='https://t.me/parshucr'>parshucr 👨‍💻</a>.</b>
-
-<b><a href='https://t.me/anonymous7370'>N33VARPV2 👨‍💻</a>.</b>
-
-<b><a href='https://github.com/Mujahith123'>MUJAHITH 👨‍💻</a>.</b>
-
-<b><a href='https://github.com/Joelkb'>JOEL 👨‍💻</a>.</b>
-
-<b><a href='https://github.com/TeamHMT'>TEAMHMT 👨‍💻</a>.</b>
+<a href='https://t.me/SHD_KHAN'>Vansh Yadav 👨‍💻</a>.</b>
 
 <b><u>
 we are nothing without your support please support us to bring more features in bot
@@ -71,7 +59,7 @@ we are nothing without your support please support us to bring more features in 
 
 <b>𝑇𝑜 𝑘𝑛𝑜𝑤 𝑎𝑏𝑜𝑢𝑡 𝑎𝑙𝑙 𝑓𝑒𝑎𝑡𝑢𝑟𝑒𝑠, 𝐽𝑜𝑖𝑛 𝑜𝑢𝑟 <a href='https://t.me/TG_BOTS_UPDATE'>𝑢𝑝𝑑𝑎𝑡𝑒𝑠 𝑐ℎ𝑎𝑛𝑛𝑒𝑙</a>.</b>
 
-<a href='https://t.me/TG_Autofilter1_Bot'>🅳︎🅴︎🅼︎🅾︎ 🅱︎🅾︎🆃︎</a>
+<a href='https://t.me/vansh_00l_bot'>🅳︎🅴︎🅼︎🅾︎ 🅱︎🅾︎🆃︎</a>
 
 ## 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 ```
@@ -129,13 +117,13 @@ we are nothing without your support please support us to bring more features in 
 ### Optional Variables
 * `PICS`: Telegraph links of images to show in start message.( Multiple images can be used separated by space )
 * `FILE_STORE_CHANNEL`: Channel from were file store links of posts should be made.Separate multiple IDs by space
-* Check [info.py](https://github.com/Kushalhk/TG_BOTZ/blob/stream-feature/info.py) for more optional variables
+* Check [info.py](https://t.me/vansh_00l_bot) for more optional variables
 
 
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/Kushalhk/TG_BOTZ">
+<a href="https://heroku.com/deploy?template=https://github.com/vansh5004/AutoFilter">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy To Heroku">
 </a>
 </p>
@@ -174,7 +162,7 @@ Use these settings when adding a monitor:</b>
 <b>Click on the below button to deploy directly to render ↓</b>
 <br>
 <br>
-<a href="https://render.com/deploy?repo=https://github.com/Kushalhk/TG_BOTZ/tree/stream-feature">
+<a href="https://render.com/deploy?repo=https://github.com/vansh5004/AutoFilter/tree/stream-feature">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 </details>
@@ -182,7 +170,7 @@ Use these settings when adding a monitor:</b>
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/Kushalhk/TG_BOTZ
+git clone https://github.com/vansh5004/AutoFilter
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
