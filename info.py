@@ -15,8 +15,8 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '21956488'))
 API_HASH = environ.get('API_HASH', '812529f879f06436925c7d62eb49f5d1')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6858520223:AAHpU73aZFVmTVBmTLN3r5-GmpkE6CvqDSE")
-
+BOT_TOKEN = environ.get('BOT_TOKEN', "6858520223:AAHpU73aZFVmTVBmTLN3r5-GmpkE6CvqDSE")  # Please Don`t remove dev credit 
+                                                                                        # Vansh-Yadav TG-@None_090 contact paid repo editing and buy
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 99999))
@@ -82,6 +82,9 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
+
+# Please Don`t remove dev credit 
+# Vansh-Yadav TG-@None_090 contact paid repo editing and buy
 
 QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
 
