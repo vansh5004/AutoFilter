@@ -1694,8 +1694,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]
             for admin in ADMINS
         ],[
-            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan5')
-            InlineKeyboardButton('• 𝟷/𝟼 •', callback_data='ALRT1')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan5'),
+            InlineKeyboardButton('• 𝟷/𝟼 •', callback_data='ALRT1'),
             InlineKeyboardButton('• Nᴇxᴛ •', callback_data='plan1')
         ]
         buttons.append(
@@ -1725,8 +1725,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔰 Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ 🔰', callback_data='payment'), 
         ],[
-            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='')
-            InlineKeyboardButton('𝟼/𝟼', callback_data='ALRT1')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data=''),
+            InlineKeyboardButton('𝟼/𝟼', callback_data='ALRT1'),
             InlineKeyboardButton('• Nᴇxᴛ •', callback_data='start')
         ],[
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='kushal')
@@ -1755,8 +1755,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔰 Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ 🔰', callback_data='payment'), 
         ],[
-            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan3')
-            InlineKeyboardButton('𝟻/𝟼', callback_data='ALRT1')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan3'),
+            InlineKeyboardButton('𝟻/𝟼', callback_data='ALRT1'),
             InlineKeyboardButton('• Nᴇxᴛ •', callback_data='plan5')
         ],[
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='kushal')
@@ -1785,8 +1785,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔰 Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ 🔰', callback_data='payment'), 
         ],[
-            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan5')
-            InlineKeyboardButton('𝟸/𝟼', callback_data='ALRT1')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan5'),
+            InlineKeyboardButton('𝟸/𝟼', callback_data='ALRT1'),
             InlineKeyboardButton('• Nᴇxᴛ •', callback_data='check')
         ],[
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='kushal')
@@ -1815,8 +1815,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔰 Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ 🔰', callback_data='payment'), 
         ],[
-            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan1')
-            InlineKeyboardButton('𝟹/𝟼', callback_data='start')
+            InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan1'),
+            InlineKeyboardButton('𝟹/𝟼', callback_data='start'),
             InlineKeyboardButton('• Nᴇxᴛ •', callback_data='plan2')
         ],[
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='kushal')
@@ -1845,8 +1845,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🔰 Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ 🔰', callback_data='payment'), 
         ],[
-            InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='plan2')
-            InlineKeyboardButton('𝟺/𝟼', callback_data='ALRT1')
+            InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='plan2'),
+            InlineKeyboardButton('𝟺/𝟼', callback_data='ALRT1'),
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='plan4')
         ],[
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='kushal')
