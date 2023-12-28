@@ -1847,7 +1847,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "payment":
         buttons = [[
-            InlineKeyboardButton('• Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ •', url=https://t.me/none_090), 
+            InlineKeyboardButton('• Cʟɪᴄᴋ Hᴇʀᴇ Tᴏ ʙᴜʏ Pʀᴇᴍɪᴜᴍ •', url=https://t.me/none_090)
         ],[
             InlineKeyboardButton('Bᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ', callback_data='kushal')
         ]]
