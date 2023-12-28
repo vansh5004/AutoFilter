@@ -1666,7 +1666,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• Dᴀɪᴍᴏɴᴅ •', callback_data='plan4'),
             InlineKeyboardButton('• Oᴛʜᴇʀ •', callback_data='plan5') 
         ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='check'),
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1689,11 +1689,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode=enums.ParseMode.HTML
         ) 
     elif query.data == "check":
-        buttons = [[
-            InlineKeyboardButton(text=f"• Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ғʀᴇᴇ ᴛʀᴀɪʟ • - {(await client.get_users(admin)).first_name}", user_id=admin)
-        ]
+        buttons = [
+            InlineKeyboardButton(text=f"• Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ғʀᴇᴇ ᴛʀᴀɪʟ • - {(await client.get_users(admin)).first_name} (@None_090)",
+        user_id=admin
+        )
             for admin in ADMINS
-        ],[
+         ],[
             InlineKeyboardButton('• Bᴀᴄᴋ •', callback_data='plan5'),
             InlineKeyboardButton('• 𝟷/𝟼 •', callback_data='ALRT1'),
             InlineKeyboardButton('• Nᴇxᴛ •', callback_data='plan1')
