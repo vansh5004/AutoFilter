@@ -1874,7 +1874,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('🔭 Rᴇɴᴅᴇʀɪɴɢ Sᴛᴀᴛᴜs ☁️', callback_data='show_admin_alert'),
+            InlineKeyboardButton('🔭 Rᴇɴᴅᴇʀɪɴɢ Sᴛᴀᴛᴜs ☁️', callback_data='fixing'),
         ],[
             InlineKeyboardButton('⚡️ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ⚡️', callback_data='source'),
         ],[
@@ -2124,36 +2124,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=reply_markup,
                 parse_mode=enums.ParseMode.HTML
             ) 
-        
-    async def show_admin_alert(update, context):
-          query = update.callback_query
-          await query.message.edit("Processing, Wait for 15 sec...")
-    
-          total, used, free = shutil.disk_usage(".")
-          stats = script.SERVER_STATS.format(
-          get_time(time.time() - context.bot.uptime),
-          psutil.cpu_percent(),
-          psutil.virtual_memory().percent,
-          humanbytes(total),
-          humanbytes(used),
-          psutil.disk_usage('/').percent,
-          humanbytes(free)
-    )
-
-    stats_pic = await make_carbon(stats, True)
-    
-    # Assuming script.ADMIN_TXT is the text you want to include in the alert
-    buttons = []  # Replace this with the actual definition of your buttons
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=(script.FONT_TXT),
-            reply_markup=reply_markup,
-            parse_mode=enums.ParseMode.HTML
-            ) 
-# Add a CallbackQueryHandler for the "admin" data
-admin_handler = CallbackQueryHandler(show_admin_alert, pattern='^admin$')
-dispatcher.add_handler(admin_handler)
-
 
     
     elif query.data == "stats":
