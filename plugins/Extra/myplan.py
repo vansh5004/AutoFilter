@@ -59,6 +59,7 @@ def button_click(update: Update, context: CallbackContext) -> None:
         )
 
 # Command handler for /myplan command
+@Client.on_message(filters.private & filters.command(["myplan"]))
 def my_plan(update: Update, context: CallbackContext) -> None:
     user_id = str(update.message.from_user.id)
 
@@ -89,6 +90,7 @@ def get_plans_text() -> str:
     return plan_text
 
 # Command handler for /add_premium command (admin only)
+@Client.on_message(filters.private & filters.command(["add_premium"]))
 def add_premium(update: Update, context: CallbackContext) -> None:
     if update.message.from_user.id == ADMIN_USER_ID:
         # Admin user can add users to premium plan
@@ -106,6 +108,7 @@ def add_premium(update: Update, context: CallbackContext) -> None:
         update.message.reply_text('You do not have permission to use this command.')
 
 # Callback handler for inline button clicks to add a premium plan
+@Client.on_message(filters.private & filters.command(["add_plan"]))
 def add_plan(update: Update, context: CallbackContext) -> None:
     query = update.callback_query
     chat_id = query.message.chat_id
