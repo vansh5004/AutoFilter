@@ -5,6 +5,8 @@ from pyrogram import types
 from pyrogram.types import Update, Message
 from telegram.ext import CallbackContext
 from datetime import datetime, timedelta
+from info import PREMIUM_USER
+
 
 # Define your global variables to store user IDs based on plans
 trial_users = set()
@@ -54,6 +56,9 @@ async def addpremium(client, message, **kwargs):
     else:
         await message.reply_text('Invalid plan. Supported plans are TRIAL, GOLD, BRONZE, DIAMOND.')
         return
+
+    # Update the combined list
+    PREMIUM_USER.append(user_id)
 
     
 
