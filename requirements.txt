@@ -40,6 +40,8 @@ pytz
 dnspython==2.3.0
 shortzy
 datetime
+PyPDF2
+gTTS
 
 search_engine_parser
 
