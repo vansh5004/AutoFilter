@@ -64,3 +64,7 @@ mdisky
 python-decouple
 ytthumb
 YoutubeTags
+
+# /myplan command Run karne me help kar ra hai ye code don`t remove this code you are remove this code facing More error
+python-telegram-bot==13.8
+aiogram==2.17
