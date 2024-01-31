@@ -1,8 +1,6 @@
 #---master---#
 #Telethroid==0.0.10
 PyLeaves==1.0.2
-Pyrogram==2.0.106
-
 #--Main----#
 git+https://github.com/MKN-BOTZ/pyrogram 
 aiofiles==22.1.0     
@@ -67,5 +65,5 @@ ytthumb
 YoutubeTags
 
 # /myplan command Run karne me help kar ra hai ye code don`t remove this code you are remove this code facing More error
-python-telegram-bot==13.8
+python-telegram-bot>=12.8,<14.0
 aiogram==2.17
