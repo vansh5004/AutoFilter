@@ -17,7 +17,7 @@ diamond_users = set()
 
 # Make VANSH_PREMIUM global
 global PREMIUM_USER
-PREMIUM_USER = set(int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split())
+# PREMIUM_USER = set(int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split())
 
 
 @Client.on_message(filters.private & filters.command(["addpremium"]))
@@ -62,11 +62,11 @@ async def addpremium(client, message, **kwargs):
         return
 
     # Update the combined list only with new user IDs
-    new_user_ids = user_id.difference(PREMIUM_USER)
+    new_user_ids = {user_id} - PREMIUM_USER
     PREMIUM_USER.update(new_user_ids)
 
     # Format new_user_ids for the confirmation message
-    formatted_user_id = " ".join(f"'{user_id}'" for user_id in new_user_ids)
+    formatted_user_id = f"'{user_id}'"
 
     
 
