@@ -62,11 +62,11 @@ async def addpremium(client, message, **kwargs):
         return
 
     # Update the combined list only with new user IDs
-    new_user_ids = user_ids - PREMIUM_USER
+    new_user_ids = user_id - PREMIUM_USER
     PREMIUM_USER.update(new_user_ids)
 
     # Format new_user_ids for the confirmation message
-    formatted_user_ids = " ".join(f"'{user_id}'" for user_id in new_user_ids)
+    formatted_user_id = " ".join(f"'{user_id}'" for user_id in new_user_ids)
 
     
 
