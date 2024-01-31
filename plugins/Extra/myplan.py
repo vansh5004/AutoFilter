@@ -5,7 +5,7 @@ from pyrogram import types
 from pyrogram.types import Update, Message
 from telegram.ext import CallbackContext
 from datetime import datetime, timedelta
-from info import VANSH_PREMIUM
+from info import PREMIUM_USER
 
 
 # Define your global variables to store user IDs based on plans
@@ -15,8 +15,8 @@ bronze_users = set()
 diamond_users = set()
 
 # Make VANSH_PREMIUM global
-global VANSH_PREMIUM
-VANSH_PREMIUM = set(int(user) if id_pattern.search(user) else user for user in environ.get('VANSH_PREMIUM', '').split())
+global PREMIUM_USER
+PREMIUM_USER = set(int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split())
 
 
 @Client.on_message(filters.private & filters.command(["addpremium"]))
@@ -61,8 +61,8 @@ async def addpremium(client, message, **kwargs):
         return
 
     # Update the combined list only with new user IDs
-    new_user_ids = user_ids - VANSH_PREMIUM
-    VANSH_PREMIUM.update(new_user_ids)
+    new_user_ids = user_ids - PREMIUM_USER
+    PREMIUM_USER.update(new_user_ids)
 
     # Format new_user_ids for the confirmation message
     formatted_user_ids = " ".join(f"'{user_id}'" for user_id in new_user_ids)
