@@ -49,12 +49,10 @@ async def start(client, message):
                     InlineKeyboardButton('• Oᴡɴᴇʀ •', callback_data='owner'),
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', callback_data='munnubhai')
                 ],[
-                    InlineKeyboardButton('❗❗ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data='disclaimer')
-                ],[
                     InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                 ],[
-                    InlineKeyboardButton('🔰 Jᴏɪɴ Pʀᴇᴍɪᴜᴍ Aᴅs ғʀᴇᴇ ᴍᴏᴠɪᴇ 🔰', callback_data='kushal') 
+                    InlineKeyboardButton('🔰 Jᴏɪɴ Pʀᴇᴍɪᴜᴍ Aᴅs ғʀᴇᴇ ᴍᴏᴠɪᴇ 🔰', callback_data='shortlink_info') 
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         m=await message.reply_text("👀")
@@ -108,12 +106,10 @@ async def start(client, message):
                     InlineKeyboardButton('• Oᴡɴᴇʀ •', callback_data='owner'),
                     InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', callback_data='munnubhai')
                 ],[
-                    InlineKeyboardButton('❗❗ ᴅɪꜱᴄʟᴀɪᴍᴇʀ ❗❗', callback_data='disclaimer')
-                ],[
                     InlineKeyboardButton('• ʜᴇʟᴘ •', callback_data='help'),
                     InlineKeyboardButton('• ᴀʙᴏᴜᴛ •', callback_data='about')
                   ],[
-                    InlineKeyboardButton('🔰 Jᴏɪɴ Pʀᴇᴍɪᴜᴍ Aᴅs ғʀᴇᴇ ᴍᴏᴠɪᴇ 🔰', callback_data='kushal') 
+                    InlineKeyboardButton('🔰 Jᴏɪɴ Pʀᴇᴍɪᴜᴍ Aᴅs ғʀᴇᴇ ᴍᴏᴠɪᴇ 🔰', callback_data='shortlink_info') 
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await message.reply_photo(
@@ -325,7 +321,8 @@ async def start(client, message):
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("♻️  ᴄʟɪᴄᴋ ᴛᴏ ᴠᴇʀɪꜰʏ  ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton('⚡ 𝑯𝒐𝒘 𝒕𝒐 𝑽𝒆𝒓𝒊𝒇𝒚 ⚡', url="https://t.me/rtx_backup/18")
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -385,7 +382,8 @@ async def start(client, message):
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("♻️  ᴄʟɪᴄᴋ ᴛᴏ ᴠᴇʀɪꜰʏ  ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton('⚡ 𝑯𝒐𝒘 𝒕𝒐 𝑽𝒆𝒓𝒊𝒇𝒚 ⚡', url="https://t.me/rtx_backup/18")
                 ]]
                 await message.reply_text(
                     text="<b>You are not verified !\nKindly verify to continue !</b>",
@@ -400,7 +398,7 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('𝕄𝕠𝕧𝕚𝕖 𝔾𝕣𝕠𝕦𝕡', url=GRP_LNK)
+                      InlineKeyboardButton("⚡ Bᴀᴄᴋᴜᴘ Cʜᴀɴɴᴇʟ​ ⚡", url="https://t.me/rtx_backup")
                      ]
                     ]
                 )
@@ -1011,6 +1009,50 @@ async def onshortlink(bot, message):
     await save_group_settings(grpid, 'is_shortlink', True)
     # ENABLE_SHORTLINK = True
     return await message.reply_text("Successfully enabled shortlink")
+
+@Client.on_message(filters.command("verifyoff") & filters.user(ADMINS))
+async def offshortlink(bot, message):
+    chat_type = message.chat.type
+    if chat_type == enums.ChatType.PRIVATE:
+        return await message.reply_text("I will Work Only in group")
+    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        grpid = message.chat.id
+        title = message.chat.title
+    else:
+        return
+    await save_group_settings(grpid, 'IS_VERIFY', False)
+    ENABLE_SHORTLINK = False
+    return await message.reply_text("Successfully Disabled Verify")
+
+@Client.on_message(filters.command("verifyon") & filters.user(ADMINS))
+async def offshortlink(bot, message):
+    chat_type = message.chat.type
+    if chat_type == enums.ChatType.PRIVATE:
+        return await message.reply_text("I will Work Only in group")
+    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        grpid = message.chat.id
+        title = message.chat.title
+    else:
+        return
+    await save_group_settings(grpid, 'IS_VERIFY', True)
+    ENABLE_SHORTLINK = False
+    return await message.reply_text("Successfully On Verify")
+    
+@Client.on_message(filters.command("setshortlinkon") & filters.user(ADMINS))
+async def onshortlink(bot, message):
+    chat_type = message.chat.type
+    if chat_type == enums.ChatType.PRIVATE:
+        return await message.reply_text("I will Work Only in group")
+    elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
+        grpid = message.chat.id
+        title = message.chat.title
+    else:
+        return
+    await save_group_settings(grpid, 'is_shortlink', True)
+    ENABLE_SHORTLINK = True
+    return await message.reply_text("Successfully enabled shortlink")
+
+
 
 @Client.on_message(filters.command("shortlink_info"))
 async def showshortlink(bot, message):
