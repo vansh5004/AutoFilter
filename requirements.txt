@@ -42,6 +42,8 @@ shortzy
 datetime
 PyPDF2
 gTTS
+pyshorteners
+requests
 
 search_engine_parser
 
