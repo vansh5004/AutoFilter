@@ -1702,7 +1702,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('1/7', callback_data='start'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='2plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1733,7 +1733,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('2/7', callback_data='start'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='3plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1763,7 +1763,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('3/7', callback_data='start'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='4plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1793,7 +1793,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('4/7', callback_data='start'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='5plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1823,7 +1823,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('5/7', callback_data='h'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='6plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1853,7 +1853,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('6/7', callback_data='h'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='7plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1884,7 +1884,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('7/7', callback_data='h'),
             InlineKeyboardButton('ɴᴇxᴛ⪢', callback_data='1plan')
             ],[
-            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='check')
+            InlineKeyboardButton('⇌Bᴀᴄᴋ⇌', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1912,7 +1912,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ],[
             InlineKeyboardButton('𝙋𝘼𝙔 𝙑𝙄𝘼 𝙐𝙋𝙄 𝙄𝘿', callback_data='amanjijiji')
         ],[
-            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='check')
+            InlineKeyboardButton('⇋ ʙᴀᴄᴋ ⇋', callback_data='shortlink_info')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
